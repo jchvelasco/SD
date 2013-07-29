@@ -674,8 +674,9 @@ code {
   font-size: 90%;
   color: #c7254e;
   white-space: nowrap;
-  background-color: #f9f2f4;
+  background-color: #E7E6E6;
   border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 pre {
