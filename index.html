@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Sticky Footer Template for Bootstrap</title>
+    <title>SD Workflow with Sublime Text 2</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/styles.css" rel="stylesheet">
@@ -26,6 +26,22 @@
           <h1>SD Page</h1>
         </div>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, provident, doloribus voluptas quis nostrum culpa illum accusantium omnis et delectus ratione blanditiis fuga reprehenderit est temporibus cumque asperiores laborum aspernatur!</p>
+        <h1>Snippets</h1>
+        <div>
+          <pre>
+            <snippet>
+                <content><![CDATA[
+            <xsl:if test="\$pageName='${1}'" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+                ${0}
+            </xsl:if>${2}
+            ]]></content>
+                <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+                <tabTrigger>xsl:if</tabTrigger>
+                <!-- Optional: Set a scope to limit where the snippet will trigger -->
+                <!-- <scope>source.python</scope> -->
+            </snippet>
+          </pre>
+        </div>
       </div>
     </div>
   </body>
