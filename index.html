@@ -53,6 +53,13 @@
                     Select word 
                     <code>CTRL</code> + <code>D</code> - (repeat to select the next occurence of the selected word)
                 </li>
+                <li>
+                    Toggle Comment
+                    <code>CTRL</code> + <code>/</code>
+                </li>
+                <li>
+                    Search with Regular Expressions
+                </li>
             </ul>
             <h2>Plugins</h2>
             <dl>
@@ -115,6 +122,60 @@
                     <blockquote>Reg Replace is a plugin for Sublime Text 2 that allows the creating of commands consisting of sequences of find and replace instructions.
                     </blockquote>
                 </dd>
+                <h3>Adding DePid Function in Sublime Text 2</h3>
+                <ol>
+                    <li><a href="https://github.com/facelessuser/RegReplace">Install RegReplace</a></li>
+                    <li>
+                        Go to Preferences > Click Browser Packages.
+                        <pre>
+                            <img src="images/package.png" alt="">
+                        </pre>
+                    </li>
+                    <li>
+                        Find and Open RegReplace Folder.
+                    </li>
+                    <li>
+                        Open and edit reg_replace.sublime-settings.
+                    </li>
+                    <li>
+                        Add this code inside the "replacements" bracket.
+                        <pre>
+                            <code>
+"remove_pid": {
+    "find": " pid=\"([^']*?)\"",
+     "replace": "",
+     "greedy": true,
+     "case": true
+}       
+                            </code>
+                        </pre>
+                        <p>It should look like this</p>
+<pre>
+    <img src="images/regreplace.png" alt="">
+</pre>
+                    </li>
+                    <li>
+                        Save changes.
+                    </li>
+                    <li>
+                        Go to Preferences > Click "Key Bindings - User". Sublime will open a new tab.
+                    </li>
+                    <li>
+                        Add this code inside the square brackets
+<pre>
+    <code>
+{
+    "keys": ["ctrl+shift+r"],
+    "command": "reg_replace",
+    "args": {"replacements": ["remove_pid"]}
+}
+    </code>
+</pre>
+                    </li>
+                    <li>
+                        Save.
+                    </li>
+                </ol>
             </dl>
             <h2>Snippets</h2>
             <div>
@@ -122,13 +183,38 @@
                     <img src="images/snippet1.jpg" alt="">
                 </pre>
             </div>
-   
-
+            <h2>Other Useful Plugins</h2>
+            <ul>
+                <li><a href="https://github.com/kemayo/sublime-text-2-git/wiki">Git</a></li>
+                <li><a href="http://livestyle.emmet.io/">Emmet - LiveStyle</a></li>
+            </ul>
             <div id="footer">
-                <h3>Sources</h3>
+                <h2>References</h2>
+                <ul>
+                    <li>
+                        <a href="http://www.sublimetext.com/2">http://www.sublimetext.com/2</a>
+                    </li>
+                    <li>
+                        <a href="http://wbond.net/sublime_packages/package_control/installation">http://wbond.net/sublime_packages/package_control/installation</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/SublimeText/Tag">https://github.com/SublimeText/Tag</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/facelessuser/BracketHighlighter">https://github.com/facelessuser/BracketHighlighter</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/SublimeLinter/SublimeLinter">https://github.com/SublimeLinter/SublimeLinter</a>
+                    </li>
+                    <li><a href="https://github.com/facelessuser/RegReplace">https://github.com/facelessuser/RegReplace</a></li>
+                    <li><a href="https://github.com/sergeche/emmet-sublime#readme">https://github.com/sergeche/emmet-sublime#readme</a></li>
+                    <li>
+                        <a href="http://livestyle.emmet.io/">http://livestyle.emmet.io/</a>
+                    </li>
+                </ul>
             </div>
         </div>
-
+        
     </div>
 
 </body>
